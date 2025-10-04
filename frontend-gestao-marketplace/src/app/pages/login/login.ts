@@ -24,7 +24,7 @@ export class Login {
   private readonly _router = inject(Router);
 
   login() {
-    if (!this.userForm.invalid) return;
+    if (this.userForm.invalid) return;
 
     this._userService
       .login(
